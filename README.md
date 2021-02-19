@@ -23,7 +23,7 @@ Swagger: http://localhost:32001/swagger-ui/
  ### Some notes
  - The reactive API doesn't add anything to the performance since the operations are synchronous (the api returns existing objects and/or modifies simple properties). If the program could asynchronously, eg write to a db, then the reactive api (webflux) would be advisable. But I did it because I tought could be a plus to the exercise.
  - The log generator is opening the file for writing using the flag W(rite), not A(ppend) - that means if for some reason you restart the log generator service the logs will be overwritten.
- - Test coverage could be better
+ - Test coverage could be better, I just wrote some example tests but they don't really mirror what I'd do for a real scenario.
  - API spec code generation could be used to put the api in yaml files and quickly generate api models
  - Models are not really models, they should be helpers or even be in the services/ package. I'm putting them into models/ because there were no actual models
  - API logs could be more verbose and better sorted (INFO/WARN/DEBUG/etc), and also for a production version DEBUG logs could be deactivated, especially web ones
