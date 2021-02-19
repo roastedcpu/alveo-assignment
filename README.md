@@ -12,14 +12,13 @@ docker, docker-compose, maybe a unix system because I have not tested the bindmo
 
 ### Short description
 3 microservices:
- - Log Generator generates logs and outputs them to a file
+ - Log Generator generates logs and outputs them to a file [output rate can be configured under docker-compose.yml]
  - Log Monitor periodically analyses the log file and exposes a reactive API
  - Dashboard is a webpage to watch the log metrics
 
 Access the dashboard: http://localhost:32000
 
 Swagger: http://localhost:32001/swagger-ui/
-
 
  ### Some notes
  - The reactive API doesn't add anything to the performance since the operations are synchronous (the api returns existing objects and/or modifies simple properties). If the program could asynchronously, eg write to a db, then the reactive api (webflux) would be advisable. But I did it because I tought could be a plus to the exercise.
