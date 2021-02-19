@@ -1,0 +1,79 @@
+.widget-logmonitor .log-metric {
+    text-align: center;
+    position: relative;
+}
+
+.widget-logmonitor .log-metric:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+.widget-logmonitor .log-metric-circle {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.widget-logmonitor .log-metric-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 16px;
+}
+
+.widget-logmonitor .card-action {
+    display: flex;
+}
+
+.widget-logmonitor .input-refresh-interval {
+    display: inline-block;
+    width: 40px !important;
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 27px !important;
+    font-size: 16px !important;
+    color: white;
+}
+
+.widget-logmonitor .submit-refresh-interval {
+    width: 60px;
+}
+
+.widget-logmonitor .labels-row > div {
+    text-align: center;
+}
+
+.widget-logmonitor .f-right {
+    margin-left: auto;
+}
+.widget-logmonitor .inline-block {
+    display: inline-block;
+}
+
+.widget-logmonitor .border-darkred {
+    border-color: darkred;
+}
+
+.widget-logmonitor .border-yellow {
+    border-color: yellow;
+}
+
+.widget-logmonitor .border-gray {
+    border-color: lightslategray;
+}
+
+.widget-logmonitor .text-white {
+    color: white;
+}
+
+.widget-logmonitor .mb-0 {
+    margin-bottom: 0;
+}

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen"/>    
+        <link type="text/css" rel="stylesheet" href="css/widget-logmonitor.css"  media="screen"/>    
+        <!-- Let the browser know website is optimized for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <a href="#" class="brand-logo">Dashboard</a>
+                    </div>
+                </div>
+              </nav>
+        </header>
+        <section id="page">
+            <div class="row">
+                <div id="widget1-container" class="col s6 m4 xl3"></div>
+            </div>
+        </section>
+        <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/widget-logmonitor.js"></script>
+        <script type="text/javascript">
+            logmonitor = new WidgetLogMonitor('http://localhost:32001')
+            logmonitor.init('#widget1-container')
+        </script>
+    </body>
+</html>

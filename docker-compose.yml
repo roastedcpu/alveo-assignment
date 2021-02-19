@@ -1,0 +1,42 @@
+version: '3.6'
+services: 
+  log-generator:
+    build: 
+      context: './log-generator'
+    entrypoint: bash run.sh
+    environment: 
+      - LOGS_PER_MINUTE=50
+    volumes:
+      - "./data-volumes/logs/generated.log:/tmp/generated-logs.log"
+    networks:
+      network1:
+        aliases: 
+          - log-generator
+
+  log-monitor:
+    build: 
+      context: './backend'
+    entrypoint: bash run.sh
+    volumes:
+      - "./data-volumes/logs/generated.log:/tmp/logfile.log"
+    ports:
+      - '32001:8080'
+    networks:
+      network1:
+        aliases: 
+          - log-monitor
+
+  dashboard:
+    build: 
+      context: './dashboard'
+    ports:
+      - '32000:80'
+    networks:
+      network1:
+        aliases: 
+          - dashboard
+
+
+networks: 
+  network1:
+

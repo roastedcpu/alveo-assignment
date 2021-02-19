@@ -1,0 +1,9 @@
+nav {
+    background-color: purple;
+}
+
+#page {
+    background-color: whitesmoke;
+    height: calc(100vh - 64px);
+}
+
